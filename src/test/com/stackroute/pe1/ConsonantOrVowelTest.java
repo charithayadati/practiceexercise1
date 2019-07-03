@@ -1,22 +1,22 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class ConsonantOrVowelTest {
-   ConsonantOrVowel check;
+   ConsonantOrVowel consonantOrVowel;
 
         @Before
         public void setup() {
             System.out.println("Before");
-            check = new ConsonantOrVowel ();
+            consonantOrVowel = new ConsonantOrVowel ();
         }
 
         @After
         public void tearDown() {
             System.out.println("After");
-            check = null;
+            consonantOrVowel = null;
         }
 
         @BeforeClass
@@ -33,17 +33,17 @@ public class ConsonantOrVowelTest {
 
         @Test
         public void givenCharacterShouldReturnvowel() {
-            String result = check.consonantorvowel("ap");
+            String result = consonantOrVowel.consonantorvowel("ap");
             assertEquals("vowelconsonant", result);
         }
         @Test
         public void givenCharacterShouldReturnConsonant() {
-            String result = check.consonantorvowel("bi");
+            String result = consonantOrVowel.consonantorvowel("bi");
             assertEquals("consonantvowel", result);
         }
         @Test
         public void givenCharacterShouldReturnerror() {
-            String result = check.consonantorvowel("2");
+            String result = consonantOrVowel.consonantorvowel("2");
             assertEquals("Error", result);
         }
 }

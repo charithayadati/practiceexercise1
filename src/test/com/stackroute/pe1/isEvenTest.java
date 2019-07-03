@@ -1,22 +1,21 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class sortAndSumEvenTest {
-   sortAndSumEven sort;
-
+public class isEvenTest {
+    isEven even;
     @Before
     public void setup() {
         System.out.println("Before");
-        sort = new sortAndSumEven();
+        even = new isEven ();
     }
 
     @After
     public void tearDown() {
         System.out.println("After");
-       sort = null;
+        even = null;
     }
 
     @BeforeClass
@@ -32,15 +31,15 @@ public class sortAndSumEvenTest {
     }
 
     @Test
-    public void givenIntegerShouldReturnFalseIfSumOfEvenNumbersGreaterThan20() {
-        String result =sort.sum(234534);
-        assertEquals("False",result);
+    public void givenNumberShouldReturnJerry() {
+        String result = even.isEven(22);
+        assertEquals("Jerry", result);
     }
     @Test
-    public void givenIntegerShouldReturnTrueIfSumOfEvenNumbersLessThan20() {
-        String result =sort.sum(646821);
-        assertEquals("True", result);
+    public void givenNumberShouldReturnTom() {
+        String result = even.isEven(23);
+        assertEquals("Tom", result);
     }
 
-
 }
+

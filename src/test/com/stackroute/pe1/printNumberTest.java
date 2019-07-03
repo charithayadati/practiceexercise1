@@ -1,23 +1,22 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class addNumberTest {
-
-    addNumber add;
+public class printNumberTest {
+    printNumber printNumber;
 
     @Before
     public void setup() {
         System.out.println("Before");
-        add = new addNumber();
+        printNumber = new printNumber();
     }
 
     @After
     public void tearDown() {
         System.out.println("After");
-        add = null;
+        printNumber = null;
     }
 
     @BeforeClass
@@ -32,17 +31,17 @@ public class addNumberTest {
         System.out.println("AfterClass");
     }
 
-    @Test
-    public void givenIntArrrayShouldReturnSumOfAllIntegers() {
-        int result =add.sum(new int[]{3,6,8,9,10});
-        assertEquals(36,result);
-    }
-    @Test
-    public void givenEmptyIntArrrayShouldReturnZero() {
-        int result =add.sum(new int[]{});
-        assertEquals(0, result);
-    }
 
+    @Test
+    public void givenShouldPrintRepeat() {
+        String result = printNumber.printRepeated(4);
+        assertEquals("1 2 2 3 3 3 4 4 4 4", result);
+    }
+    @Test
+    public void givenNegativeIntShouldReturnNull() {
+        String result = printNumber.printRepeated(-2);
+        assertNull("Number Should not be negative",result);
+    }
 
 
 }

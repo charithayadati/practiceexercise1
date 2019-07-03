@@ -1,9 +1,9 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import java.util.Scanner;
 
 public class printNumber {
-    public String printRepeated(int number) {
+    public String printRepeated(int number) { //prints the lastcharacters repeatedly
         if (number > 0) {
             StringBuilder stringBuilder = new StringBuilder();
             for (int i = 1; i <= number; i++) {

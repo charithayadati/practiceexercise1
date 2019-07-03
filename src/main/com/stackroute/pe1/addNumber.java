@@ -1,10 +1,10 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import java.util.Scanner;
 import java.lang.Character;
 
 public class addNumber {
-    public int sum(int[] numbers) {
+    public int sum(int[] numbers) { //Adds the numbers in the array
         int result = 0;
         for (int i = 0; i < numbers.length; i++) {
 

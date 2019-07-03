@@ -1,22 +1,22 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class GuessnumberTest {
-    Guessnumber guess;
+    Guessnumber guessnumber;
 
     @Before
     public void setup() {
         System.out.println("Before");
-        guess = new Guessnumber();
+        guessnumber = new Guessnumber();
     }
 
     @After
     public void tearDown() {
         System.out.println("After");
-        guess = null;
+        guessnumber = null;
     }
 
     @BeforeClass
@@ -33,17 +33,17 @@ public class GuessnumberTest {
 
     @Test
     public void givenIntegerShouldReturnLessThanOriginalNumber() {
-        String result =guess.check(20);
+        String result = guessnumber.check(20);
         assertEquals("Number Guessed is less than original Number",result);
     }
     @Test
     public void givenIntegerShouldReturnMatchedWithOriginalNum() {
-        String result =guess.check(39);
+        String result = guessnumber.check(39);
         assertEquals("Number Guessed matches the original number", result);
     }
     @Test
     public void givenIntegerShouldReturnGreaterThanOriginalNum() {
-        String result =guess.check(45);
+        String result = guessnumber.check(45);
         assertEquals("Number Guessed is more than original Number", result);
     }
 

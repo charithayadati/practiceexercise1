@@ -1,21 +1,21 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class StringReverseTest {
-        StringReverse reverse;
+        StringReverse stringReverse;
     @Before
     public void setup() {
         System.out.println("Before");
-        reverse = new StringReverse ();
+        stringReverse = new StringReverse ();
     }
 
     @After
     public void tearDown() {
         System.out.println("After");
-        reverse = null;
+        stringReverse = null;
     }
 
     @BeforeClass
@@ -31,16 +31,20 @@ public class StringReverseTest {
     }
 
     @Test
-    public void givenNumberShouldReturnReverse1() {
-        String result = reverse.reverseString("stackroute");
+    public void givenStringShouldReturnReverse1() {
+        String result = stringReverse.reverseString("stackroute");
         assertEquals("etuorkcats", result);
     }
     @Test
-    public void givenNumberShouldReturnReverse2() {
-        String  result = reverse.reverseString("stack");
+    public void givenStringShouldReturnReverse2() {
+        String  result = stringReverse.reverseString("stack");
         assertEquals("kcats", result);
     }
 
-
+    @Test
+    public void givenStringShouldReturnNull() {
+        String  result = stringReverse.reverseString(null);
+        assertNull("passed", result);
+    }
 
 }

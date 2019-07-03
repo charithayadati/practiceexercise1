@@ -1,10 +1,10 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import java.util.Random;
 import java.util.Scanner;
 
 public class Guessnumber {
-    public String check(int guessedNum) {
+    public String check(int guessedNum) {   //checks given number matches random number
 
         int ran = 39;
 

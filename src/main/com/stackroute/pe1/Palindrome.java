@@ -1,10 +1,10 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import java.util.Scanner;
 
 public class Palindrome {
 
-    public String isPalindrome(int number) {
+    public String isPalindrome(int number) {    //checks palindrome or not
         boolean result = false;
         int evenSum = 0;
 

@@ -1,21 +1,21 @@
-package com.company.junit;
+package com.stackroute.pe1;
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
 public class checkTheCharTest {
-    checkTheChar check;
+    checkTheChar checkTheChar;
 
 @Before
 public void setup() {
         System.out.println("Before");
-        check = new checkTheChar();
+        checkTheChar = new checkTheChar();
         }
 
 @After
 public void tearDown() {
         System.out.println("After");
-        check = null;
+        checkTheChar = null;
         }
 
 @BeforeClass
@@ -32,22 +32,22 @@ public static void tearDownAfterClass() {
 
 @Test
 public void givenCharacterShouldReturnLowercase() {
-        String result = check.sample('a');
+        String result = checkTheChar.sample('a');
         assertEquals("Lowercase letter", result);
         }
 @Test
 public void givenCharacterShouldReturnUppercase() {
-        String result = check.sample('A');
+        String result = checkTheChar.sample('A');
         assertEquals("Uppercase letter", result);
         }
 @Test
 public void givenCharacterShouldReturnDigit() {
-        String result = check.sample('2');
+        String result = checkTheChar.sample('2');
         assertEquals("Is a Digit", result);
         }
 @Test
 public void givenCharacterShouldReturnSymbol() {
-        String result = check.sample('#');
+        String result = checkTheChar.sample('#');
         assertEquals("Is a Special symbol", result);
         }
 

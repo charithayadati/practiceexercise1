@@ -1,21 +1,23 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 import org.junit.*;
 
 import static org.junit.Assert.*;
 
-public class RepeatLastTest {
-    RepeatLast repeat;
+public class addNumberTest {
+
+    addNumber addNumber;
+
     @Before
     public void setup() {
         System.out.println("Before");
-        repeat = new RepeatLast ();
+        addNumber = new addNumber();
     }
 
     @After
     public void tearDown() {
         System.out.println("After");
-        repeat = null;
+        addNumber = null;
     }
 
     @BeforeClass
@@ -31,14 +33,14 @@ public class RepeatLastTest {
     }
 
     @Test
-    public void givenNumberShouldReturnRepeat2() {
-        String result = repeat.repeatLast("stackroute" , 2);
-        assertEquals("stackroutetete", result);
+    public void givenIntArrrayShouldReturnSumOfAllIntegers() {
+        int result =addNumber.sum(new int[]{3,6,8,9,10});
+        assertEquals(36,result);
     }
     @Test
-    public void givenNumberShouldReturnRepeat3() {
-        String  result = repeat.repeatLast("stack",3);
-        assertEquals("stackackackack", result);
+    public void givenEmptyIntArrrayShouldReturnZero() {
+        int result =addNumber.sum(new int[]{});
+        assertEquals(0, result);
     }
 
 

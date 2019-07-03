@@ -1,4 +1,4 @@
-package com.company.junit;
+package com.stackroute.pe1;
 
 public class sortAndSumEven {
     public String sum(int number) {
@@ -18,7 +18,7 @@ public class sortAndSumEven {
 
             }
         }
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {   //sorts the number
             for (int j = i + 1; j < count; j++) {
                 if (array[i] < array[j]) {
                     temp = array[i];
@@ -27,7 +27,7 @@ public class sortAndSumEven {
                 }
             }
         }
-        for (int i = 0; i < count; i++) {
+        for (int i = 0; i < count; i++) {   //adds even numbers
 
             if ((array[i]) % 2 == 0)
                 sum = sum + array[i];
